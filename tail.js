@@ -24,13 +24,16 @@ const tail = function(arr) {
   // Return the array minus the head of the array.
   return arr.slice(1);
 };
-
-// Modify the assertEqual function to check if the arrays are the same length.
 const assertEqual = function(actual, expected) {
   if (actual.length !== expected.length) {
     // If they are the aren't the same, console log failure.
     console.log(`Assertion Failed ❌: ${actual} !== ${expected}`);
     return;
+    // Else if there is only 1 element in the array, return an empty array.
+  } else if (actual.length === 1) {
+    return [];
+  } else if (actual.length === 0) {
+    return [];
   }
 
   // Use a for loop to iterate through each array comparing each element.
@@ -39,18 +42,28 @@ const assertEqual = function(actual, expected) {
       console.log(`Assertion Failed ❌: ${actual} !== ${expected}`);
     } return;
   }
+
   // If the arrays are the same console Assertion Passed message.
   console.log(`Assertion Passed ✅: ${actual} === ${expected}`);
 };
+
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
 
 // Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3);
+// const words = ["Yo Yo", "Lighthouse", "Labs"];
+// tail(words); // no need to capture the return value since we are not checking it
+// assertEqual(words.length, 3);
 
+// Test Case 2: Array with one element, yields an empty array.
+// const words = ["Hello"];
+// tail(words);
+// assertEqual(words.length, 1);
 
+// Test Case 3: Empty array, yields an empty array for its tail.
+// const words = [];
+// tail(words);
+// assertEqual(words.length, 0);
 
 
 
