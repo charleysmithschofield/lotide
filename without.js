@@ -74,3 +74,6 @@ assertArraysEqual(result2, [6, 3]); // Test removing 4
 
 const result3 = without(["8", "2", "9"], [7, 2, "4"]);
 assertArraysEqual(result3, ["8", "9"]); // Test removing "2", "9", 7, "4"
+
+const result4 = without([1, 2, 3], []);
+assertArraysEqual(result4, [1, 2, 3]); // Test with empty itemstoRemove array. 
