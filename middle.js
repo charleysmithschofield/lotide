@@ -55,8 +55,8 @@ const middle = function(array) {
     return [array[middleIndex]];
   // Cases with even number of elements
   } else if (array.length % 2 === 0) {
-    const middleIndex1 = array.length / 2 - 1;
-    const middleIndex2 = array.length / 2;
+    const middleIndex1 = length / 2 - 1;
+    const middleIndex2 = length / 2;
     return [array[middleIndex1], array[middleIndex2]];
   }
 };
