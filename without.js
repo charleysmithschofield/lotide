@@ -31,8 +31,7 @@ Warning
    arrays or arrays of objects. We will save this "deeper" problem for another day.
 */
 
-// The eqArrays function takes two arrays and compares the elements in
-// both arrays to see if they match.
+// Compares the elements of two arrays to see if they match.
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -45,8 +44,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-// The function assertArraysEquals comparea the two values it takes in
-// and prints out a message telling us if they match or not.
+// Compares two values and prints out a message if they match or not.
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
@@ -56,9 +54,7 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 
-// The function takes in a source array and an itemsToRemove array.
-// It returns a new array with only the elements from source that
-// are note present in the itemsToRemove array.
+// Returns a new array with elements from 'source' that are not present in the itemsToRemove array.
 const without = function(source, itemsToRemove) {
   let result = [];
   for (let element of source) {
