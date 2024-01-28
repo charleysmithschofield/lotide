@@ -72,8 +72,8 @@ assertArraysEqual(middle([1, 3]), []); // => []
 
 // Test cases for arrays with odd numer of elements
 assertArraysEqual(middle([1, 2, 4]), [2]); // => [2]
-assertArraysEqual(middle([2, 3, 4, 5, 7]), [3, 4, 5]); // => [4]
+assertArraysEqual(middle([2, 3, 4, 5, 7]), [4]); // => [4]
 
 // Test cases for arrays with even number of elements
 assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [2, 3, 4, 5]); // => [3, 4]
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), (3, 4)); // => [3, 4]
