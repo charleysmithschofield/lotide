@@ -43,11 +43,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 3, 5], [3, 5, 7]), true); // => should FAIL
-assertEqual(eqArrays([2, 5, 7], [2, 3, 7]), false); // => should PASS
-assertEqual(eqArrays([1, 3, 5], [1, 3, 5]), false); // => should FAIL
-assertEqual(eqArrays([], []), false); // => should FAIL
-assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 9]), true); // => should FAIL
-assertEqual(eqArrays(['chicken', 2, 2], [3, 0, 2]), false); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 3, 5], [3, 5, 7]), false);
+assertEqual(eqArrays([2, 5, 7], [2, 3, 7]), false);
+assertEqual(eqArrays([], []), true); 
+assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 9]), false);
+assertEqual(eqArrays(['chicken', 2, 2], [3, 0, 2]), false);
 
