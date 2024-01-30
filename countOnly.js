@@ -1,17 +1,14 @@
 
 // countOnly Function:
 
-/* Let's work together to implement countOnly.
+/* 
+Write a function called, countOnly, that takes in a collection of items (`allItems`)
+& count the occurences of specific items as specified by the `itemsToCount1 object.
 
-This function should take in a collection of items and return counts
-for a specific subset of those items. It won't count everything.
-
-In order to decide what to count, it will also be given an idea of
-which items we care about and will only count those, ignoring the
-others.
-
-Items in our case will be limited to Strings.
+This function must return an object (`results`) where the keys are the items to be
+counted, and the values are the counts of those items in the collection.
 */
+
 
 // assertEqual function, compares actual and expected values
 const assertEqual = function(actual, expected) {
