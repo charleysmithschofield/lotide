@@ -30,8 +30,9 @@ const countLetters = function(str) {
   for (const letter of str) {
     // Ignore spaces
     if (letter !== ' ') {
-      // Increment if the letter is already in the results object
+      // Check if the letter is already in the results object
       if (results[letter]) {
+        // If yes, increment it
         results[letter] += 1;
       } else {
         results[letter] = 1;
