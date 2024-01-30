@@ -41,7 +41,7 @@ const countLetters = function(str) {
 };
 
 // Call countLetters function with a string
-const str = "hello" + "lighthouse" + "labs";
+const str = `hello lighthouse labs`;
 
 // Call countLeters function with a string
 const results = countLetters(str);
