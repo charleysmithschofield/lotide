@@ -62,4 +62,5 @@ assertEqual(results["u"], 1);
 assertEqual(results["s"], 2);
 assertEqual(results["a"], 1);
 assertEqual(results["b"], 1);
-
+assertEqual(results[" "], 0);
+assertEqual(results["$"], 0);
