@@ -26,7 +26,9 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-// function to find the key by the value
+// The findKeyByValue function takes an object and a value as inputs.
+// It returns the first key in the object that has that value.
+// If the value does not appear in the object, it returns undefined.
 const findKeyByValue = function(object, value) {
 
   // for..in loop to iterate the object
