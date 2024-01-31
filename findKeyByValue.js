@@ -26,12 +26,11 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-// function to find a key by the value
+// function to find the key by the value
 const findKeyByValue = function(object, value) {
-  const keys = Object.keys(object);
-  
-  // for.. of loop to iterate through the array of keys
-  for (const key of keys) {
+
+  // for..in loop to iterate the object
+  for (const key in object) {
     if (object[key] === value) {
       return key;
     }
