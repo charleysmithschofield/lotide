@@ -15,6 +15,7 @@ const eqArrays = function(arr1, arr2) {
       return false;
     }
   }
+  return true;
 };
 
 // Function assert equality and log the result
