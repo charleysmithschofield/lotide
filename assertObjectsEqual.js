@@ -45,10 +45,10 @@ const assertObjectsEqual = function(actual, expected) {
   // if statement comparing the actual value to the expected value
   if (eqArrays(actual, expected)) {
     // console.log assertion passed message because equal
-    console.log(`✅✅✅ Assertion Passed: (inspect${actual}) === (inspect${expected});`);
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
     // console.log assertion failed message because not equal
-    console.log(`❌❌❌ Assertion Failed: (inspect${actual}) !== (inspect${expected})`);
+    console.log(`❌❌❌ Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
   console.log(`Example label: ${inspect(actual)}`);
 };

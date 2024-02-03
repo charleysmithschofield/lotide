@@ -1,7 +1,7 @@
 
 // countOnly Function:
 
-/* 
+/*
 Write a function called, countOnly, that takes in a collection of items (`allItems`)
 & count the occurences of specific items as specified by the `itemsToCount1 object.
 

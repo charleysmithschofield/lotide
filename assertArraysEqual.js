@@ -2,7 +2,8 @@
 // Challenge
 
 // Instruction
-// Implement assertArraysEqual which will take in two arrays and console.log an appropriate message to the console.
+// Implement assertArraysEqual which will take in two arrays and 
+// console.log an appropriate message to the console.
 
 // The message will be similar to that of assertEqual.
 // In fact, you could refer to the code for assertEqual to help you implement this.
@@ -28,7 +29,7 @@ const eqArrays = function(arr1, arr2) {
     }
   }
   return true;
-}
+};
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -37,6 +38,6 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([1, 2], [1,2]); 
+assertArraysEqual([1, 2], [1,2]);
 assertArraysEqual([2,2], [1,2]);
 assertArraysEqual([],[1,2]);

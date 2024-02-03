@@ -47,6 +47,7 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`Assertion Failed ❌: ${actual} !== ${expected}`);
   }
+};
 
 // TEST CODE
 assertEqual("hi", "hi"); // comparing identical strings - should pass

@@ -79,3 +79,4 @@ eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject); // => false
 // Assert equality using assertEqual for better visibility
 assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
 
+
