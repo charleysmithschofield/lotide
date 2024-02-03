@@ -4,8 +4,22 @@
 // an appropriate message to the console.
 
 
+// function to compare two arrays for equality.
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 // Function to compare two objects for equality, incl the values that are arrays
-const eqArrays = (object1, object2) => {
+const eqObjects = (object1, object2) => {
   const object1Keys = Object.keys(object1);
   const object2Keys = Object.keys(object2);
 
