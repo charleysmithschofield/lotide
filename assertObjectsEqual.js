@@ -64,6 +64,5 @@ const assertObjectsEqual = function(actual, expected) {
     // console.log assertion failed message because not equal
     console.log(`❌❌❌ Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
-  console.log(`Example label: ${inspect(actual)}`);
 };
 assertObjectsEqual({ a: '1', b: '2'}, { b: '2', a: '1'});
