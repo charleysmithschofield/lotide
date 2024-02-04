@@ -52,14 +52,21 @@ const results1 = map(words, word => word[0]);
 console.log(results1);
 
 
-// tests
+// test cases: check if the map function correctly applies the callback function
+
+
 const expected = ["M", "i", "t", "b", "c", "e"];
+// should return the first letter of each word in the word array
 assertArraysEqual(map(words, word => word[0]), expected); // should pass
+
+
 
 const numbers = [3, 6, 9, 12, 15];
 const expectedNumbers = [9, 18, 27, 36, 45];
+// to multiply each number in the numbers array by 3
 assertArraysEqual(map(numbers, num => num * 3), expectedNumbers); // should pass
 
 const num = [1, 2, 3, 4, 5];
 const expectedNum = [2, 3, 6, 8, 10];
+// to multiply each number in the num array by 2
 assertArraysEqual(map(num, num => num * 2), expectedNum); // should fail
