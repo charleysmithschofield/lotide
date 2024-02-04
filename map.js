@@ -20,11 +20,11 @@ const eqArrays = function(arr1, arr2) {
 };
 
 // function to assert if two arrays are equal and log the result
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
+const assertArraysEqual = function(results1, expected) {
+  if (eqArrays(results1, expected)) {
+    console.log(`✅ Assertion Passed: ${results1} === ${expected}`);
   } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`❌ Assertion Failed: ${results1} !== ${expected}`);
   }
 };
 
@@ -38,7 +38,9 @@ const map = function(array, callback) {
   // initialize an empty array to store the results
   const results = [];
 
+  // for..of loop to iterate through the elements of the words array
   for (let item of array) {
+    // push the results of the callback function to our results array
     results.push(callback(item));
   }
   // return the results
@@ -51,6 +53,5 @@ console.log(results1);
 
 
 // tests
-assertArraysEqual(["M"], ["M"]); // should pass
-assertArraysEqual(["i"], ["I"]); // should fail
-assertArraysEqual(["cat"], ["c"]); // should fail
+const expected = ["M", "i", "t", "b", "c", "e"];
+assertArraysEqual(map(words, word => word[0]), expected); // should pass
