@@ -46,6 +46,8 @@ const takeUntil = function(array, callback) {
   for (const item of array) {
     // Check if the callback function returns a truthy value for the current element
     if (callback(item)) {
+      break;
+    } else {
       // If true, push the current element to the results array
       result1.push(item);
     }
