@@ -55,3 +55,11 @@ console.log(results1);
 // tests
 const expected = ["M", "i", "t", "b", "c", "e"];
 assertArraysEqual(map(words, word => word[0]), expected); // should pass
+
+const numbers = [3, 6, 9, 12, 15];
+const expectedNumbers = [9, 18, 27, 36, 45];
+assertArraysEqual(map(numbers, num => num * 3), expectedNumbers); // should pass
+
+const num = [1, 2, 3, 4, 5];
+const expectedNum = [2, 3, 6, 8, 10];
+assertArraysEqual(map(num, num => num * 2), expectedNum); // should fail
