@@ -25,15 +25,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const object = {
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-};
-
 // Define findKey function that takes in an object and a callback function
 const findKey = function(object, callback) {
 
@@ -45,7 +36,6 @@ const findKey = function(object, callback) {
       return key;
     }
   }
-  // If no key, return undefined
   return undefined;
 };
 
