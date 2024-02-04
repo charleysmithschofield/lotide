@@ -66,4 +66,4 @@ assertArraysEqual(takeUntil(array1, word => word === "cat"), expected1); // shou
 const array2 = [1, 20, 40, 60, 80, 100, 120, 140, 160];
 const expected2 = [1, 20, 40, 60, 80];
 // should return all the numbers until the number 100.
-assertArraysEqual(takeUntil(array2, x => x < 100), expected2); // should pass
+assertArraysEqual(takeUntil(array2, x => x === 100), expected2); // should pass
