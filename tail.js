@@ -3,9 +3,6 @@
 
 // Define the function called tail.
 const tail = function(arr) {
-  if (arr.length <= 1) {
-    return [];
-  }
   // Return the array minus the head of the array.
   return arr.slice(1);
 };
