@@ -1,7 +1,4 @@
 
-// requires assertEqual function for tests
-const assertEqual = require('./assertEqual');
-
 // tail is a function which returns the "tail" of an array. The "tail" is everything except for the first element.
 
 // Define the function called tail.
