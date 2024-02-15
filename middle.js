@@ -5,18 +5,18 @@
 const middle = function(array) {
   const length = array.length;
   // Cases with only one or two elements
-  if (array.length <= 2) {
+  if (length <= 2) {
     return [];
-  // Cases with odd number of elements
-  } else if (array.length % 2 === 1) {
-    const middleIndex = Math.floor(length / 2);
-    return [array[middleIndex]];
+  }
+  const middleIndex = Math.floor(length / 2);
   // Cases with even number of elements
-  } else if (array.length % 2 === 0) {
-    const middleIndex1 = length / 2 - 1;
-    const middleIndex2 = length / 2;
-    return [array[middleIndex1], array[middleIndex2]];
+  if (length % 2 === 0) {
+    return [array[middleIndex - 1], array[middleIndex]];
+  } else {
+    // Cases with odd number of elements
+    return [array[middleIndex]];
   }
 };
 
+// exports middle file
 module.exports = middle;
