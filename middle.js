@@ -21,27 +21,7 @@
 
 // Warning
 
-
-// Test/Assertion Fnctions
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const eqArrays = require('./eqArrays');
 
 // ACTUAL FUNCTION
 const middle = function(array) {
@@ -61,19 +41,4 @@ const middle = function(array) {
   }
 };
 
-// TEST CODE
-assertArraysEqual([1, 2], [1,2]); // => 1,2 === 1,2
-assertArraysEqual([2,2], [1,2]); // => 2,2 !== 1,2
-assertArraysEqual([],[1,2]); // => !== 1,2
-
-// Test cases for arrays with one or two elements
-assertArraysEqual(middle([1]), []); // => []
-assertArraysEqual(middle([1, 3]), []); // => []
-
-// Test cases for arrays with odd numer of elements
-assertArraysEqual(middle([1, 2, 4]), [2]); // => [2]
-assertArraysEqual(middle([2, 3, 4, 5, 7]), [4]); // => [4]
-
-// Test cases for arrays with even number of elements
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
+module.exports = middle;
