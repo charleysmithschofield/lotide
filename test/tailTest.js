@@ -11,10 +11,6 @@ describe("#tail", () => {
     assert.deepEqual(words.length, 3); // Check that the original array has not changed
     assert.deepEqual(wordsTail[0], "Lighthouse"); // Check the first element of the returned array
   });
-});
-
-// Test Case 2: Tests that an array with one element, yields an empty array.
-describe("#tail", () => {
   it("returns the tail of an array, leaving the original array unchanged", () => {
     const wordsSingle = ["Hello"];
     const singleTail = tail(wordsSingle);
@@ -22,10 +18,6 @@ describe("#tail", () => {
     assert.deepEqual(wordsSingle.length, 1); // Check that the original array has not changed
     assert.deepEqual(wordsSingle[0], "Hello"); // Check the first element of the returned array
   });
-});
-
-// Test Case 3: Test that an empty array, yields an empty array for its tail.
-describe("#tail", () => {
   it("returns the tail of an array, leaving the original array unchanged", () => {
     const emptyArray = [];
     const emptyArrayTail = tail(emptyArray);
@@ -33,4 +25,3 @@ describe("#tail", () => {
     assert.deepEqual(emptyArray.length, 0); // Check that the original array has not changed
   });
 });
-
