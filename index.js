@@ -33,5 +33,5 @@ module.exports = {
   flatten,
   letterPositions,
   takeUntil,
-  without
+  without,
 };
