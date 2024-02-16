@@ -26,12 +26,11 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-* `assertArraysEqual`: is a function that determines if two arrays are identical
-* `assertEqual`: is a function that compares an actual value to an expected value and will show if that assertion passed or failed.
-* `assertObjectsEqual`: is a function that determines if two objects are equal.
+* `assertArraysEqual`: a function that compares two arrays for equality.
+* `assertEqual`: is a function that compares two values for equality.
+* `assertObjectsEqual`: is a function compares two objects for equality.
 * `countLetters`: is a function that takes in a string and returns a count of each of the letters in that string.
-* `countOnly`: is a function that takes in a collection of items
-& counts the occurences of specific items.
+* `countOnly`: is a function that takes in a collection of items and counts the occurences of specific items.
 * `eqArrays`: is a function that takes in two arrays and returns true or false, based on a perfect match.
 * `eqObjects`: eqArrays takes in two objects and returns true or false, based on a perfect match.
 * `findKey`: is a function that takes in an object and a callback and return the first key for which the callback returns a truthy value.
@@ -40,6 +39,7 @@ The following functions are currently implemented:
 * `head`: is a function that will return the first element of an array, also known as the "head".
 * `letterPositions`: is a function that returns all
 the indices (zero-based positions) in the string where each character is found.
+* `map`: is a function that takes in an array and a callback and reuturns a new array based on the results of the callback on each item in the array.
 * `middle`: is a function that finds the middle elements of an array.
 * `tail`: is a function which returns the "tail" of an array. The "tail" is everything except for the first element.
 * `takeUntil`: is a function which returns a "slice of the array with elements taken from the beginning". 
