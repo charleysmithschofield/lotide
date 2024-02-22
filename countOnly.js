@@ -10,14 +10,8 @@ counted, and the values are the counts of those items in the collection.
 */
 
 
-// assertEqual function, compares actual and expected values
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed ✅: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertion Failed ❌: ${actual} !== ${expected}`);
-  }
-};
+// requires assertEqual function, compares actual and expected values
+const assertEqual = require('./assertEqual');
 
 
 // countOnly function to take in a collection of names and return counts
@@ -63,3 +57,6 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+// exports countOnly function
+module.exports = countOnly;

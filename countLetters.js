@@ -13,14 +13,9 @@ Tips:
 
 */
 
-// assertEqual function that compares actual to expected
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed ✅: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertion Failed ❌: ${actual} !== ${expected}`);
-  }
-};
+// requires the assertEqual function that compares actual to expected
+const assertEqual = require('./assertEqual');
+
 
 // countLetters function that takes in a string
 const countLetters = function(str) {
@@ -64,3 +59,6 @@ assertEqual(results["a"], 1);
 assertEqual(results["b"], 1);
 assertEqual(results[" "], 0);
 assertEqual(results["$"], 0);
+
+// exports countLetters function
+module.exports = countLetters;

@@ -17,13 +17,7 @@ PSEUDOCODE:
 6. Write tests for the findKey function.
 */
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed ✅: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertion Failed ❌: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 // Define findKey function that takes in an object and a callback function
 const findKey = function(object, callback) {
@@ -71,3 +65,6 @@ assertEqual(findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 3), "Akaleri"); // => "Akaleri"
+
+// exports findKey function
+module.exports = findKey;

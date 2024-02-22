@@ -11,14 +11,8 @@
 // Use a condition statement to check if it the key has a value
 // If the key doesn't have a value, return undefined.
 
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed ✅: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertion Failed ❌: ${actual} !== ${expected}`);
-  }
-};
+// requires assertEqual function that compares two values for equality
+const assertEqual = require('./assertEqual');
 
 const bestTVShowsByGenre = {
   sci_Fi: "The Expanse",
@@ -45,3 +39,6 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), 'comedy');
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Rick and Morty"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Andor"), undefined);
+
+// exports findKeyByValue function
+module.exports = findKeyByValue;

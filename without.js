@@ -31,32 +31,17 @@ Warning
    arrays or arrays of objects. We will save this "deeper" problem for another day.
 */
 
-// Compares the elements of two arrays to see if they match.
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+// requires eqArrays function to compare arrays for equality
+const eqArrays = require('./eqArrays');
 
-// Compares two values and prints out a message if they match or not.
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`❌ Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
+// requires assertArraysEqual to compare arrays for equality and return assertion passed or failed messages
+const assertArraysEqual = require('./assertArraysEqual');
 
 
 // Returns a new array with elements from 'source' that are not present in the itemsToRemove array.
 const without = function(source, itemsToRemove) {
   let result = [];
+  // for of loop to iterate through the elements of the source.
   for (let element of source) {
     if (!itemsToRemove.includes(element)) {
       result.push(element);
@@ -81,3 +66,7 @@ assertArraysEqual(result3, ["8", "9"]); // Test removing "2", "9", 7, "4"
 
 const result4 = without([1, 2, 3], []);
 assertArraysEqual(result4, [1, 2, 3]); // Test with empty itemstoRemove array.
+
+
+// exports without function
+module.exports = without;

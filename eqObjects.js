@@ -4,28 +4,13 @@
 // Implement the definition for function eqObjects which will take in two objects
 // and return true or false, based on a perfect match.
 
-// Function to compare two arrays for equality.
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  // Iterate through each element of the arrays & check if equal
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+
+// requires the function eqArrays from the eqArrays.js file
+const eqArrays = require('./eqArrays');
 
 // Function assert equality and log the result
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`✅: Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌: Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
+
 
 // Function to compare two objects for equality, incl the values that are arrays
 const eqObjects = (object1, object2) => {
@@ -80,3 +65,5 @@ eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject); // => false
 assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
 
 
+// exports eqObjects function
+module.exports = eqObjects;

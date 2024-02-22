@@ -12,39 +12,26 @@ number of occurrences, multiple numbers may be needed to represent all
 the places in the string that it shows up.
 */
 
+// requires eqArrays function to compare arrays for equality
+const eqArrays = require('./eqArrays');
 
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+// requires assertArraysEqual to compare arrays for equality and return assertion passed or failed messages
+const assertArraysEqual = require('./assertArraysEqual');
 
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
 
-const assertArraysEqual = function(actual, expected) {
-
-  // Only proceed to compare arrays if both actual and expected are defined.
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
+// Define letterPositision function
 const letterPositions = function(sentence) {
   const results = {};
 
+  // for loop to iterate through the sentence
   for (let i = 0; i < sentence.length; i++) {
     const char = sentence[i];
+    // if character is a space leave array empty
     if (char !== ' ') {
       if (!results[char]) {
         results[char] = [];
       }
+      // else push the character to the results
       results[char].push(i);
     }
   }
@@ -64,3 +51,6 @@ assertArraysEqual(result.s, [8, 21]);
 assertArraysEqual(result.e, [9, 16, 22]);
 assertArraysEqual(result.n, [12]);
   
+
+// exports letterPositions function
+module.exports = letterPositions;

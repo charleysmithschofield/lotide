@@ -2,31 +2,11 @@
 
 // TESTING OUR CODE - Add our assertArraysEqual and eqArrays functions into the file:
 
-// function to compare if two arrays are equal
-const eqArrays = function(arr1, arr2) {
-  // if statement to compare array lengths for equality
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+// requires eqArrays function to compare arrays for equality
+const eqArrays = require('./eqArrays');
 
-  // for loop to iterate through array 1
-  for (let i = 0; i < arr1.length; i++) {
-    // if statement to compare the elements of array1 and array2
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-// function to assert if two arrays are equal and log the result
-const assertArraysEqual = function(results1, expected) {
-  if (eqArrays(results1, expected)) {
-    console.log(`✅ Assertion Passed: ${results1} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${results1} !== ${expected}`);
-  }
-};
+// requires assertArraysEqual to compare arrays for equality and return assertion passed or failed messages
+const assertArraysEqual = require('./assertArraysEqual');
 
 // an array of words
 const words = ["Morty", "is", "the", "best", "cat", "ever"];
@@ -70,3 +50,6 @@ const num = [1, 2, 3, 4, 5];
 const expectedNum = [2, 3, 6, 8, 10];
 // to multiply each number in the num array by 2
 assertArraysEqual(map(num, num => num * 2), expectedNum); // should fail
+
+// exports map function
+module.exports = map;

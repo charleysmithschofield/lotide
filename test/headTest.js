@@ -13,3 +13,4 @@ describe("#head", () => {
     assert.strictEqual(head([]), undefined);
   });
 });
+
